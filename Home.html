@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AllSounds</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <input type="text" id="search" placeholder="Procurar por música..." onkeyup="buscarMusica()">
+        <nav>
+            <a href="#" onclick="logout()">Sair</a>
+        </nav>
+    </header>
+
+    <div class="genre-filter">
+        <button onclick="filterGenre('TODOS')">Todos</button>
+        <button onclick="filterGenre('POP')">POP</button>
+        <button onclick="filterGenre('ROCK')">ROCK</button>
+        <button onclick="filterGenre('FUNK')">FUNK</button>
+        <button onclick="filterGenre('MPB')">MPB</button>
+        <button onclick="filterGenre('SAMBA')">SAMBA</button>
+        <button onclick="filterGenre('SERTANEJO')">SERTANEJO</button>
+        <button onclick="filterGenre('CLÁSSICA')">CLÁSSICA</button>
+        <button onclick="filterGenre('GAÚCHA')">GAÚCHA</button>
+    </div>
+
+    <ul id="music-list"></ul>
+    <audio id="audio-player" controls></audio>
+    <button id="play">▶</button>
+    <button id="next">⏭</button>
+    <button id="prev">⏮</button>
+    
+    <!-- Botões de gênero -->
+    <button class="genre-btn" data-genre="pop">POP</button>
+    <button class="genre-btn" data-genre="rock">ROCK</button>
+    <button class="genre-btn" data-genre="funk">FUNK</button>
+    <button class="genre-btn" data-genre="mpb">MPB</button>
+    <button class="genre-btn" data-genre="samba">SAMBA</button>
+    <button class="genre-btn" data-genre="sertanejo">SERTANEJO</button>
+    <button class="genre-btn" data-genre="classica">CLÁSSICA</button>
+    <button class="genre-btn" data-genre="gaucha">GAÚCHA</button>
+
+    <audio id="player" controls style="width:100%; margin-top: 20px;"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
